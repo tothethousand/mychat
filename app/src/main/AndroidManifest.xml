@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.mychat">
+
+    <application
+        android:name=".base.BaseApp"
+        android:allowBackup="true"
+        android:icon="@drawable/dog"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round1"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme"
+        android:usesCleartextTraffic="true">
+        <activity android:name=".ui.AddFriendActivity"></activity>
+
+        <!--小米适配-->
+        <meta-data
+            android:name="notch.config"
+            android:value="portrait|landscape" />
+
+        <!-- Bmob -->
+        <provider
+            android:name="cn.bmob.v3.util.BmobContentProvider"
+            android:authorities="com.example.mychat.BmobContentProvider" />
+
+        <activity
+            android:name=".ui.MvActivity"
+            android:launchMode="singleTask"
+            android:theme="@style/AppThemeFull" />
+        <activity
+            android:name=".ui.LoginActivity"
+            android:launchMode="singleTask"
+            android:theme="@style/AppThemeFull" />
+        <activity
+            android:name=".ui.IndexActivity"
+            android:launchMode="singleTask"
+            android:theme="@style/AppThemeFull">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".ui.GuideActivity"
+            android:launchMode="singleTask"
+            android:theme="@style/AppThemeFull" /> <!-- 启动页 -->
+
+        <!--高德地图-->
+        <meta-data
+            android:name="com.amap.api.v2.apikey"
+            android:value="692a9c229f3907d7bd361d4a56e7e083" />
+        <!-- 主页 -->
+        <activity
+            android:name=".MainActivity"
+            android:launchMode="singleTask"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
+        <!-- 上传头像 -->
+        <activity
+            android:name=".ui.FirstUploadActivity"
+            android:label="@string/text_upload_title"
+            android:launchMode="standard" /> <!-- FileProvide -->
+        <provider
+            android:name="androidx.core.content.FileProvider"
+            android:authorities="com.example.mychat.fileprovider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/filepaths" />
+        </provider>
+<!--        融云，广播接收者-->
+        <receiver
+            android:name=".receiver.SealNotificationReceiver"
+            android:exported="false">
+            <intent-filter>
+                <action android:name="io.rong.push.intent.MESSAGE_ARRIVED" />
+                <action android:name="io.rong.push.intent.MESSAGE_CLICKED" />
+                <action android:name="io.rong.push.intent.THIRD_PARTY_PUSH_STATE" />
+            </intent-filter>
+        </receiver>
+
+        <!--云服务-->
+        <service
+            android:name=".service.CloudService"
+            android:exported="true" />
+
+        <!--用户信息-->
+        <activity
+            android:name=".ui.UserInfoActivity"
+            android:launchMode="singleTask"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
+
+        <!--新朋友-->
+        <activity
+            android:name=".ui.NewFriendActivity"
+            android:label="@string/text_me_item_title_3"
+            android:launchMode="singleTask" />
+
+        <!--聊天-->
+        <activity
+            android:name=".ui.ChatActivity"
+            android:launchMode="singleTask" />
+
+<!--        &lt;!&ndash;聊天信息&ndash;&gt;-->
+<!--        <activity-->
+<!--            android:name=".ui.ChatInfoActivity"-->
+<!--            android:launchMode="singleTask" />-->
+
+        <!--图片预览-->
+        <activity
+            android:name=".ui.ImagePreviewActivity"
+            android:launchMode="singleTask"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
+
+        <!--位置-->
+        <activity
+            android:name=".ui.LocationActivity"
+            android:launchMode="singleTask" />
+
+        <!--二维码-->
+        <activity
+            android:name=".ui.QrCodeActivity"
+            android:launchMode="singleTask"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
+        <!--定位-->
+        <service android:name="com.amap.api.location.APSService"></service>
+        <!--分享-->
+        <activity
+            android:name=".ui.ShareImgActivity"
+            android:launchMode="singleTask" />
+
+        <!--发朋友圈-->
+        <activity
+            android:name=".ui.PushSquareActivity"
+            android:label="@string/text_square_psuh"
+            android:launchMode="singleTask" />
+
+        <!--个人信息-->
+        <activity
+            android:name=".ui.MeInfoActivity"
+            android:label="@string/text_me_item_title_1"
+            android:launchMode="singleTask" />
+
+        <!--设置-->
+        <activity
+            android:name=".ui.SettingActivity"
+            android:launchMode="singleTask" />
+
+
+    </application>
+
+</manifest>

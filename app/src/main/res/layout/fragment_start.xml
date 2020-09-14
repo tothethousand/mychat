@@ -1,0 +1,249 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ffe4c4"
+
+
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginTop="40dp"
+        android:paddingLeft="15dp"
+
+        android:paddingRight="15dp">
+
+        <TextView
+            android:id="@+id/tv_star_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="@string/app_name"
+            android:textColor="@color/colorPrimary"
+            android:textSize="22sp" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:id="@+id/iv_camera"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:layout_marginRight="15dp"
+                android:src="@drawable/img_camera" />
+
+            <ImageView
+                android:id="@+id/iv_add"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:src="@drawable/img_add" />
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/tv_connect_status"
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:background="#deb887"
+        android:gravity="center"
+        android:paddingLeft="10dp"
+        android:text="一切准备就绪"
+        android:textColor="@android:color/white" />
+<!--    <com.moxun.tagcloudlib.view.TagCloudView-->
+<!--        android:id="@+id/mCloudView"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="0dp"-->
+<!--        android:layout_weight="1"-->
+<!--        app:autoScrollMode="uniform"-->
+<!--        app:radiusPercent="0.8"-->
+<!--        app:scrollSpeed="1" />-->
+    <RelativeLayout
+        android:background="@color/white"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        >
+
+        <com.example.mychat.fragment.xuanwoanim.RotateCircleView
+            android:id="@+id/rotate_view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
+
+
+        <ImageView
+            android:id="@+id/iv_flower2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:src="@mipmap/img_guide_compose_hua2"/>
+
+        <ImageView
+            android:id="@+id/iv_flower1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:src="@mipmap/img_guide_compose_hua1"/>
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:src="@drawable/dog"/>
+
+        <RelativeLayout
+            android:id="@+id/rl_anim"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_centerInParent="true"
+            android:background="#00000000"/>
+
+
+    </RelativeLayout>
+<!--    <TextView-->
+<!--        android:id="@+id/mCloudView"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="0dp"-->
+<!--        android:layout_weight="1"-->
+<!--       />-->
+<!--    <com.example.mychat.ui.xuanwoanim.RotateCircleView-->
+<!--        android:id="@+id/rotate_view"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="match_parent"-->
+<!--        android:layout_weight="1">-->
+
+<!--    </com.example.mychat.ui.xuanwoanim.RotateCircleView>-->
+
+
+    <LinearLayout
+        android:background="@color/white"
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:orientation="horizontal">
+
+<!--        <LinearLayout-->
+<!--            android:id="@+id/ll_random"-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="match_parent"-->
+<!--            android:layout_margin="10dp"-->
+<!--            android:layout_weight="1"-->
+<!--            android:background="@drawable/shape_star_1"-->
+<!--            android:gravity="center"-->
+<!--            android:orientation="vertical">-->
+
+<!--            <ImageView-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:src="@drawable/img_star_card_1" />-->
+
+<!--            <TextView-->
+<!--                android:id="@+id/tv_random"-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:text="@string/text_main_star_1"-->
+<!--                android:textColor="@android:color/white"-->
+<!--                android:textSize="18sp"-->
+<!--                android:textStyle="bold" />-->
+
+<!--        </LinearLayout>-->
+
+<!--        <LinearLayout-->
+<!--            android:id="@+id/ll_soul"-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="match_parent"-->
+<!--            android:layout_margin="10dp"-->
+<!--            android:layout_weight="1"-->
+<!--            android:background="@drawable/shape_star_2"-->
+<!--            android:gravity="center"-->
+<!--            android:orientation="vertical">-->
+
+<!--            <ImageView-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:src="@drawable/img_star_card_2" />-->
+
+<!--            <TextView-->
+<!--                android:id="@+id/tv_soul"-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:text="@string/text_main_star_2"-->
+<!--                android:textColor="@android:color/white"-->
+<!--                android:textSize="18sp"-->
+<!--                android:textStyle="bold" />-->
+
+<!--        </LinearLayout>-->
+
+<!--        <LinearLayout-->
+<!--            android:id="@+id/ll_fate"-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="match_parent"-->
+<!--            android:layout_margin="10dp"-->
+<!--            android:layout_weight="1"-->
+<!--            android:background="@drawable/shape_star_3"-->
+<!--            android:gravity="center"-->
+<!--            android:orientation="vertical">-->
+
+<!--            <ImageView-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:src="@drawable/img_star_card_3" />-->
+
+<!--            <TextView-->
+<!--                android:id="@+id/tv_fate"-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:text="@string/text_main_star_3"-->
+<!--                android:textColor="@android:color/white"-->
+<!--                android:textSize="18sp"-->
+<!--                android:textStyle="bold" />-->
+
+<!--        </LinearLayout>-->
+
+        <LinearLayout
+            android:id="@+id/ll_love"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="10dp"
+            android:layout_weight="1"
+
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="200dp"
+                android:layout_height="50dp"
+                android:background="@drawable/shape_star_4"
+                android:gravity="center"
+                android:orientation="vertical"
+                >
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/hot_dog" />
+
+<!--                <TextView-->
+<!--                    android:id="@+id/tv_love"-->
+<!--                    android:layout_width="wrap_content"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:text="@string/text_main_star_4"-->
+<!--                    android:textColor="@android:color/white"-->
+<!--                    android:textSize="18sp"-->
+<!--                    android:textStyle="bold" />-->
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</LinearLayout>

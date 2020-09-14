@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+<!--    PullToRefreshView-->
+<!-- 老版本刷新页面-->
+<!--    <androidx.swiperefreshlayout.widget.SwipeRefreshLayout-->
+<!--        android:id="@+id/mChatRecordRefreshLayout"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="200dp">-->
+
+
+<!--    </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>-->
+
+<com.example.mychat.fragment.refresh_util.PullToRefreshView
+    android:id="@+id/pull_to_refresh"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <include
+            android:visibility="gone"
+            android:id="@+id/item_empty_view"
+            android:layout_height="match_parent"
+            android:layout_width="match_parent"
+            layout="@layout/layout_empty_view" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/mChatRecordView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+    </LinearLayout>
+</com.example.mychat.fragment.refresh_util.PullToRefreshView>
+
+</LinearLayout>
